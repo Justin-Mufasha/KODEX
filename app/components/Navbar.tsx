@@ -1,51 +1,45 @@
 const links = [
-  { label: "Home", href: "/" },
   { label: "Services", href: "/#services" },
-  { label: "Our Work", href: "/#work" },
-  { label: "Innovation Lab", href: "/#innovation" },
+  { label: "Work", href: "/#work" },
+  { label: "Innovation", href: "/#innovation" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   return (
-    <header className="relative z-20 border-b border-kodex-border bg-kodex-bg/80 backdrop-blur-xl">
-      <div className="mx-auto flex min-h-20 max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 py-3 sm:px-10 lg:px-16">
+    <header className="relative z-20 border-b border-white/10 bg-[#080A0F]">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-5 sm:min-h-20 sm:flex-row sm:justify-between sm:gap-8 sm:py-0 sm:px-10 lg:px-16">
         <a
           aria-label="KODEX home"
-          className="flex shrink-0 items-center gap-3"
+          className="shrink-0 text-sm font-semibold tracking-[0.2em] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           href="/"
         >
-          <span
-            aria-hidden="true"
-            className="flex size-10 items-center justify-center rounded-full border border-white/20 bg-kodex-bg text-base font-bold tracking-tight text-kodex-text shadow-[0_0_20px_rgba(255,255,255,0.08)]"
-          >
-            K
-          </span>
-          <span className="text-sm font-bold tracking-[0.2em] text-kodex-text">
-            KODEX
-          </span>
+          KODEX
         </a>
 
         <nav
           aria-label="Main navigation"
-          className="order-3 w-full overflow-x-auto pb-1 sm:order-none sm:w-auto sm:pb-0"
+          className="w-full overflow-x-auto sm:w-auto"
         >
-          <ul className="flex min-w-max items-center gap-6 sm:gap-7 lg:gap-9">
+          <ul className="flex min-w-max items-center justify-center gap-5 sm:gap-8">
             {links.map((link) => (
               <li key={link.label}>
                 <a
-                  className={`text-xs transition-colors hover:text-kodex-text sm:text-[13px] ${
-                    link.label === "Contact"
-                      ? "rounded-full border border-white/15 px-4 py-2 text-kodex-muted hover:border-white/35"
-                      : "text-kodex-muted"
-                  }`}
+                  className="text-sm text-[#A1A1AA] transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                   href={link.href}
                 >
                   {link.label}
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                className="text-sm font-medium text-white transition-colors hover:text-[#A1A1AA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                href="/#contact"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
