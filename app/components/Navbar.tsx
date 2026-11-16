@@ -9,7 +9,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="relative z-20 border-b border-white/[0.07] bg-[#080A0F]/80 backdrop-blur-xl">
+    <header className="relative z-20 border-b border-kodex-border bg-kodex-bg/80 backdrop-blur-xl">
       <div className="mx-auto flex min-h-20 max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 py-3 sm:px-10 lg:px-16">
         <a
           aria-label="KODEX home"
@@ -18,11 +18,11 @@ export default function Navbar() {
         >
           <span
             aria-hidden="true"
-            className="flex size-10 items-center justify-center rounded-full border border-white/20 bg-black text-base font-bold tracking-tight text-white shadow-[0_0_20px_rgba(255,255,255,0.08)]"
+            className="flex size-10 items-center justify-center rounded-full border border-white/20 bg-kodex-bg text-base font-bold tracking-tight text-kodex-text shadow-[0_0_20px_rgba(255,255,255,0.08)]"
           >
             K
           </span>
-          <span className="text-sm font-bold tracking-[0.2em] text-white">
+          <span className="text-sm font-bold tracking-[0.2em] text-kodex-text">
             KODEX
           </span>
         </a>
@@ -35,10 +35,10 @@ export default function Navbar() {
             {links.map((link) => (
               <li key={link.label}>
                 <a
-                  className={`text-xs transition-colors hover:text-white sm:text-[13px] ${
+                  className={`text-xs transition-colors hover:text-kodex-text sm:text-[13px] ${
                     link.label === "Contact"
-                      ? "rounded-full border border-white/15 px-4 py-2 text-slate-200 hover:border-white/35"
-                      : "text-slate-400"
+                      ? "rounded-full border border-white/15 px-4 py-2 text-kodex-muted hover:border-white/35"
+                      : "text-kodex-muted"
                   }`}
                   href={link.href}
                 >

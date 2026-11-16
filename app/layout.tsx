@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
 
 export const metadata: Metadata = {
   title: "KODEX — Technology & Innovation",
@@ -16,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={geist.variable}>
         <Navbar />
         {children}
         <Footer />

@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <main
-        className="relative isolate flex min-h-[calc(100svh-5rem)] overflow-hidden bg-[#080A0F] text-white"
+        className="relative isolate flex min-h-[calc(100svh-5rem)] overflow-hidden bg-kodex-bg text-kodex-text"
         id="home"
       >
         <Starfield />
@@ -32,10 +32,10 @@ export default function Home() {
 
         <section className="relative z-10 mx-auto grid w-full max-w-7xl flex-1 items-center gap-12 px-6 py-20 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-16">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-slate-400 sm:text-xs">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-kodex-muted sm:text-xs">
               KODEX — TECHNOLOGY &amp; INNOVATION
             </p>
-            <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-[-0.055em] text-white sm:text-6xl md:text-7xl">
+            <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-[-0.055em] text-kodex-text sm:text-6xl md:text-7xl">
               Technology that moves business forward.
             </h1>
 
@@ -46,13 +46,13 @@ export default function Home() {
 
             <div className="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row lg:justify-start">
               <a
-                className="rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[#080A0F] transition hover:-translate-y-0.5 hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                className="rounded-full bg-kodex-text px-7 py-3.5 text-sm font-medium text-kodex-bg transition hover:-translate-y-0.5 hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                 href="/work"
               >
                 Explore Our Work
               </a>
               <a
-                className="rounded-full border border-white/20 bg-white/[0.03] px-7 py-3.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                className="rounded-full border border-white/20 bg-white/[0.03] px-7 py-3.5 text-sm font-medium text-kodex-text transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                 href="/contact"
               >
                 Start a Project
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.32em] text-slate-400 sm:text-xs">
+            <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.32em] text-kodex-muted sm:text-xs">
               The Eternal Arc
             </p>
             <Ring3D />
@@ -71,13 +71,13 @@ export default function Home() {
 
       <section
         aria-labelledby="services-heading"
-        className="bg-[#15191F] px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16"
+        className="bg-[#15191F] px-6 py-24 text-kodex-text sm:px-10 sm:py-32 lg:px-16"
         id="services"
       >
         <div className="mx-auto w-full max-w-7xl">
-          <div className="grid gap-8 border-b border-white/10 pb-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div className="grid gap-8 border-b border-kodex-border pb-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-slate-400 sm:text-xs">
+              <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-kodex-muted sm:text-xs">
                 What we do
               </p>
               <h2
@@ -134,7 +134,7 @@ export default function Home() {
               },
             ].map((service) => (
               <article
-                className="border-b border-white/10 py-8 sm:px-6 sm:py-10 lg:px-8"
+                className="border-b border-kodex-border py-8 sm:px-6 sm:py-10 lg:px-8"
                 key={service.number}
               >
                 <p className="mb-8 text-xs tracking-[0.2em] text-slate-500">
@@ -154,12 +154,12 @@ export default function Home() {
 
       <section
         aria-labelledby="innovation-heading"
-        className="overflow-hidden bg-[#1B2028] px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16"
+        className="overflow-hidden bg-[#1B2028] px-6 py-24 text-kodex-text sm:px-10 sm:py-32 lg:px-16"
         id="innovation"
       >
         <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-slate-400 sm:text-xs">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-kodex-muted sm:text-xs">
               Beyond the expected
             </p>
             <h2
@@ -173,7 +173,7 @@ export default function Home() {
               prototypes new ways to solve the challenges ahead.
             </p>
             <a
-              className="mt-9 inline-flex items-center gap-3 text-sm font-medium text-white transition-colors hover:text-slate-300"
+              className="mt-9 inline-flex items-center gap-3 text-sm font-medium text-kodex-text transition-colors hover:text-slate-300"
               href="/innovation"
             >
               Discover the Innovation Lab
@@ -181,7 +181,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#11151B]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-kodex-border bg-[#11151B]">
             <Innovation3D />
             <p className="absolute inset-x-0 bottom-8 z-10 text-center text-[10px] font-medium uppercase tracking-[0.3em] text-slate-500">
               New dimensions are taking shape
@@ -192,12 +192,12 @@ export default function Home() {
 
       <section
         aria-labelledby="about-heading"
-        className="bg-[#090B10] px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16"
+        className="bg-[#090B10] px-6 py-24 text-kodex-text sm:px-10 sm:py-32 lg:px-16"
         id="about"
       >
         <div className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-slate-400 sm:text-xs">
+            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-kodex-muted sm:text-xs">
               A little about us
             </p>
             <h2
@@ -216,7 +216,7 @@ export default function Home() {
               control.
             </p>
             <a
-              className="mt-8 inline-flex items-center gap-3 text-sm font-medium text-white transition-colors hover:text-slate-300"
+              className="mt-8 inline-flex items-center gap-3 text-sm font-medium text-kodex-text transition-colors hover:text-slate-300"
               href="/about"
             >
               More about KODEX
@@ -228,11 +228,11 @@ export default function Home() {
 
       <section
         aria-labelledby="work-heading"
-        className="work-section px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16"
+        className="work-section px-6 py-24 text-kodex-text sm:px-10 sm:py-32 lg:px-16"
         id="work"
       >
         <div className="mx-auto w-full max-w-7xl">
-          <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-slate-400">
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-kodex-muted">
             Selected projects
           </p>
           <h2
@@ -249,7 +249,7 @@ export default function Home() {
           <div className="mt-14 grid gap-6 lg:mt-16 lg:grid-cols-2 lg:gap-8">
             {projects.map((project, index) => (
               <article
-                className="group rounded-3xl border border-white/[0.09] bg-gradient-to-b from-white/[0.035] to-white/[0.01] p-3 transition-colors hover:border-white/20 sm:p-4"
+                className="group rounded-3xl border border-kodex-border bg-gradient-to-b from-white/[0.035] to-white/[0.01] p-3 transition-colors hover:border-white/20 sm:p-4"
                 key={project.title}
               >
                 <div
@@ -267,7 +267,7 @@ export default function Home() {
                   ) : (
                     <>
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(148,163,184,0.1),transparent_55%)]" />
-                      <div className="relative w-[68%] rounded-xl border border-white/10 bg-[#0A0C11]/90 p-4 shadow-2xl sm:p-6">
+                      <div className="relative w-[68%] rounded-xl border border-kodex-border bg-[#0A0C11]/90 p-4 shadow-2xl sm:p-6">
                         <div className="mb-6 flex items-center justify-between border-b border-white/[0.08] pb-4">
                           <div className="h-2 w-20 rounded-full bg-white/20" />
                           <div className="size-2 rounded-full bg-slate-300/50" />
@@ -293,7 +293,7 @@ export default function Home() {
                 </div>
 
                 <div className="px-3 pb-4 pt-6 sm:px-4 sm:pb-5">
-                  <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white sm:text-3xl">
+                  <h3 className="text-2xl font-semibold tracking-[-0.035em] text-kodex-text sm:text-3xl">
                     {project.title}
                   </h3>
                   <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300/65 sm:text-base sm:leading-7">
@@ -305,7 +305,7 @@ export default function Home() {
                   >
                     {project.technologies.map((technology) => (
                       <li
-                        className="rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-xs text-slate-300/80"
+                        className="rounded-full border border-kodex-border bg-white/[0.025] px-3 py-1.5 text-xs text-slate-300/80"
                         key={technology}
                       >
                         {technology}
@@ -321,12 +321,12 @@ export default function Home() {
 
       <section
         aria-labelledby="contact-heading"
-        className="contact-section px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16"
+        className="contact-section px-6 py-24 text-kodex-text sm:px-10 sm:py-32 lg:px-16"
         id="contact"
       >
         <div className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div className="flex flex-col items-start">
-            <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-slate-400">
+            <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-kodex-muted">
               Let&apos;s work together
             </p>
             <h2
@@ -353,7 +353,7 @@ export default function Home() {
                   </label>
                   <input
                     autoComplete="name"
-                    className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
+                    className="w-full rounded-xl border border-kodex-border bg-black/30 px-4 py-3.5 text-sm text-kodex-text outline-none transition placeholder:text-slate-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
                     id="homepage-contact-name"
                     name="name"
                     placeholder="Your name"
@@ -371,7 +371,7 @@ export default function Home() {
                   </label>
                   <input
                     autoComplete="email"
-                    className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
+                    className="w-full rounded-xl border border-kodex-border bg-black/30 px-4 py-3.5 text-sm text-kodex-text outline-none transition placeholder:text-slate-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
                     id="homepage-contact-email"
                     name="email"
                     placeholder="you@company.com"
@@ -389,7 +389,7 @@ export default function Home() {
                   Message
                 </label>
                 <textarea
-                  className="min-h-40 w-full resize-y rounded-xl border border-white/10 bg-black/30 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
+                  className="min-h-40 w-full resize-y rounded-xl border border-kodex-border bg-black/30 px-4 py-3.5 text-sm text-kodex-text outline-none transition placeholder:text-slate-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
                   id="homepage-contact-message"
                   name="message"
                   placeholder="Tell us a little about your project..."
@@ -399,7 +399,7 @@ export default function Home() {
               </div>
 
               <button
-                className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-[#080A0F] transition hover:-translate-y-0.5 hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto"
+                className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-kodex-text px-7 py-3.5 text-sm font-semibold text-kodex-bg transition hover:-translate-y-0.5 hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto"
                 type="button"
               >
                 Send Message
@@ -411,7 +411,7 @@ export default function Home() {
                 Prefer email?
               </p>
               <a
-                className="mt-3 inline-block text-base text-slate-200 transition-colors hover:text-white sm:text-lg"
+                className="mt-3 inline-block text-base text-slate-200 transition-colors hover:text-kodex-text sm:text-lg"
                 href="mailto:mufashajustin@gmail.com"
               >
                 mufashajustin@gmail.com
