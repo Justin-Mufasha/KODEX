@@ -33,7 +33,7 @@ export default function WorkPage() {
         <div className="mt-14 grid gap-6 lg:mt-16 lg:grid-cols-2 lg:gap-8">
           {projects.map((project, index) => (
             <article
-              className="group rounded-3xl border border-white/[0.12] bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-3 transition-colors hover:border-white/20 sm:p-4"
+              className="group rounded-3xl border border-white/[0.12] bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-3 transition duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.28)] motion-reduce:transition-none sm:p-4"
               key={project.title}
             >
               <div
