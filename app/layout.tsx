@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "KODEX — Sovereign Intelligence",
+  title: "KODEX — Technology & Innovation",
   description:
-    "AI infrastructure and autonomous systems that you control, from multi-agent platforms to on-premises deployments and embodied robotics.",
+    "We design and build digital experiences, software and intelligent systems that help businesses solve problems and grow.",
 };
 
 export default function RootLayout({

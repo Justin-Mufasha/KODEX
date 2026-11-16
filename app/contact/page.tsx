@@ -1,3 +1,5 @@
+"use client";
+
 export default function ContactPage() {
   return (
     <main className="min-h-[calc(100svh-5rem)] bg-[#1B2028] px-6 py-20 text-white sm:px-10 sm:py-24 lg:px-16">
@@ -15,7 +17,23 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <form className="rounded-3xl border border-white/[0.09] bg-gradient-to-br from-white/[0.045] to-white/[0.015] p-6 sm:p-9 lg:p-10">
+          <form
+            className="rounded-3xl border border-white/[0.09] bg-gradient-to-br from-white/[0.045] to-white/[0.015] p-6 sm:p-9 lg:p-10"
+            onSubmit={(event) => {
+              event.preventDefault();
+
+              const formData = new FormData(event.currentTarget);
+              const name = String(formData.get("name") ?? "");
+              const email = String(formData.get("email") ?? "");
+              const message = String(formData.get("message") ?? "");
+              const subject = encodeURIComponent("New Project Inquiry");
+              const body = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+              );
+
+              window.location.href = `mailto:mufashajustin@gmail.com?subject=${subject}&body=${body}`;
+            }}
+          >
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label
@@ -73,7 +91,7 @@ export default function ContactPage() {
 
             <button
               className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-[#080A0F] transition hover:-translate-y-0.5 hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto"
-              type="button"
+              type="submit"
             >
               Send Message
             </button>

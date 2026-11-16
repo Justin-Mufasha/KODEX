@@ -45,18 +45,18 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row lg:justify-start">
-              <button
+              <a
                 className="rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[#080A0F] transition hover:-translate-y-0.5 hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-                type="button"
+                href="/work"
               >
                 Explore Our Work
-              </button>
-              <button
+              </a>
+              <a
                 className="rounded-full border border-white/20 bg-white/[0.03] px-7 py-3.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-                type="button"
+                href="/contact"
               >
                 Start a Project
-              </button>
+              </a>
             </div>
           </div>
 
