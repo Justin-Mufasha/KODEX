@@ -8,7 +8,7 @@ export default function SectionPage({
   description,
 }: SectionPageProps) {
   return (
-    <main className="min-h-[calc(100svh-5rem)] bg-[#080A0F] px-6 py-24 text-white sm:px-10 lg:px-16">
+    <main className="min-h-[calc(100svh-5rem)] bg-kodex-bg px-6 py-24 text-kodex-text sm:px-10 lg:px-16">
       <section className="mx-auto flex w-full max-w-7xl flex-col justify-center">
         <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-slate-400">
           KODEX — TECHNOLOGY &amp; INNOVATION

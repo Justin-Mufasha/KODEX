@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --kodex-bg: #080a0f;
-  --kodex-text: #ffffff;
-  --kodex-muted: #a1a1aa;
-  --kodex-border: rgba(255, 255, 255, 0.1);
+  --kodex-bg: #050505;
+  --kodex-text: #f5f5f5;
+  --kodex-muted: #a3a3a3;
+  --kodex-border: rgba(255, 255, 255, 0.12);
   color-scheme: dark;
 }
 
@@ -19,9 +19,34 @@ html {
   scroll-behavior: smooth;
 }
 
+.kodex-logo-bob {
+  animation: kodex-logo-bob 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes kodex-logo-bob {
+  0%,
+  18%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  8% {
+    transform: translateY(7px) rotate(-8deg);
+  }
+
+  13% {
+    transform: translateY(3px) rotate(8deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .kodex-logo-bob {
+    animation: none;
   }
 }
 
@@ -33,6 +58,15 @@ html {
 .contact-section {
   border-top: 1px solid rgba(255, 255, 255, 0.035);
   background-color: var(--kodex-bg);
+}
+
+.home-display {
+  color: #d4d4d4;
+  font-size: clamp(2.6rem, 5.5vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  line-height: 0.88;
+  text-transform: uppercase;
 }
 
 body {

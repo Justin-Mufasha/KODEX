@@ -1,26 +1,28 @@
-const experiments = [
-  "AI Agent Prototypes",
-  "3D Web Experiences",
-  "IoT Smart Systems",
-];
+import { getMessages, type Locale } from "../lib/i18n";
 
-export default function InnovationPage() {
+export default function InnovationPage({
+  locale = "en",
+}: {
+  locale?: Locale;
+}) {
+  const messages = getMessages(locale);
+  const copy = messages.innovation;
+
   return (
     <main className="min-h-[calc(100svh-5rem)] bg-kodex-bg px-6 py-20 text-kodex-text sm:px-10 sm:py-24 lg:px-16">
       <section className="mx-auto w-full max-w-7xl">
         <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-kodex-muted">
-          KODEX — TECHNOLOGY &amp; INNOVATION
+          {messages.brandLine}
         </p>
         <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-[-0.05em] sm:text-6xl md:text-7xl">
-          Innovation Lab
+          {copy.title}
         </h1>
         <p className="mt-7 max-w-2xl text-base leading-7 text-kodex-muted sm:text-lg sm:leading-8">
-          Experiments, prototypes, and future technologies we are exploring at
-          KODEX.
+          {copy.description}
         </p>
 
         <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
-          {experiments.map((experiment, index) => (
+          {copy.items.map((experiment, index) => (
             <li
               className="group rounded-2xl border border-white/[0.09] bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:from-white/[0.07] motion-reduce:transition-none sm:p-7"
               key={experiment}
@@ -55,7 +57,7 @@ export default function InnovationPage() {
                 )}
               </div>
               <p className="text-xs font-medium tabular-nums tracking-[0.2em] text-kodex-muted">
-                EXPERIMENT {String(index + 1).padStart(2, "0")}
+                {copy.experiment} {String(index + 1).padStart(2, "0")}
               </p>
               <h2 className="mt-4 text-xl font-medium leading-snug tracking-[-0.02em] sm:text-2xl">
                 {experiment}

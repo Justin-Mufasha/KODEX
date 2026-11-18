@@ -45,7 +45,7 @@ function Ring({ reducedMotion }: { reducedMotion: boolean }) {
       <mesh>
         <torusGeometry args={[1.05, 0.105, 32, 160]} />
         <meshPhysicalMaterial
-          color="#dbe4f0"
+          color="#e5e5e5"
           metalness={0.9}
           roughness={0.16}
           clearcoat={1}
@@ -81,12 +81,12 @@ export default function Ring3D() {
           position={[3, 4, 5]}
         />
         <directionalLight
-          color="#c6d8f2"
+          color="#d4d4d4"
           intensity={1.2}
           position={[-4, 2, 1]}
         />
         <pointLight color="#ffffff" intensity={0.6} position={[-2, 3, 3]} />
-        <pointLight color="#b4d2ff" intensity={0.7} position={[3, -2, 2]} />
+        <pointLight color="#bfbfbf" intensity={0.7} position={[3, -2, 2]} />
         <Ring reducedMotion={reducedMotion} />
       </Canvas>
     </div>

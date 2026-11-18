@@ -1,3 +1,5 @@
+import { getMessages, type Locale } from "../lib/i18n";
+
 const projects = [
   {
     title: "The Eternal Arc",
@@ -15,19 +17,20 @@ const projects = [
   },
 ] as const;
 
-export default function WorkPage() {
+export default function WorkPage({ locale = "en" }: { locale?: Locale }) {
+  const copy = getMessages(locale).work;
+
   return (
-    <main className="min-h-[calc(100svh-5rem)] bg-[#0B0D12] px-6 py-20 text-white sm:px-10 sm:py-24 lg:px-16">
+    <main className="min-h-[calc(100svh-5rem)] bg-kodex-bg px-6 py-20 text-kodex-text sm:px-10 sm:py-24 lg:px-16">
       <section className="mx-auto w-full max-w-7xl">
         <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-slate-400">
-          Selected projects
+          {copy.eyebrow}
         </p>
         <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-[-0.05em] sm:text-6xl md:text-7xl">
-          Our Work
+          {copy.title}
         </h1>
-        <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300/70 sm:text-lg sm:leading-8">
-          A selection of digital experiences and systems designed to move
-          businesses forward.
+        <p className="mt-7 max-w-2xl text-base leading-7 text-kodex-muted sm:text-lg sm:leading-8">
+          {copy.description}
         </p>
 
         <div className="mt-14 grid gap-6 lg:mt-16 lg:grid-cols-2 lg:gap-8">
@@ -72,7 +75,7 @@ export default function WorkPage() {
                   </>
                 )}
                 <span className="absolute left-5 top-5 text-[10px] font-medium uppercase tracking-[0.24em] text-slate-500">
-                  Project {String(index + 1).padStart(2, "0")}
+                  {copy.project} {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
 
@@ -80,11 +83,11 @@ export default function WorkPage() {
                 <h2 className="text-2xl font-semibold tracking-[-0.035em] text-white sm:text-3xl">
                   {project.title}
                 </h2>
-                <p className="mt-3 max-w-xl text-sm leading-6 text-slate-300/65 sm:text-base sm:leading-7">
-                  {project.description}
+                <p className="mt-3 max-w-xl text-sm leading-6 text-kodex-muted sm:text-base sm:leading-7">
+                  {copy.projects[index]}
                 </p>
                 <ul
-                  aria-label="Technologies used"
+                  aria-label={copy.technologies}
                   className="mt-6 flex flex-wrap gap-2"
                 >
                   {project.technologies.map((technology) => (

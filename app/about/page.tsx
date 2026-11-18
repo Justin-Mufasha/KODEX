@@ -1,4 +1,9 @@
-export default function AboutPage() {
+import { getMessages, type Locale } from "../lib/i18n";
+
+export default function AboutPage({ locale = "en" }: { locale?: Locale }) {
+  const messages = getMessages(locale);
+  const copy = messages.about;
+
   return (
     <main className="min-h-[calc(100svh-5rem)] bg-kodex-bg px-6 py-20 text-kodex-text sm:px-10 sm:py-24 lg:px-16">
       <div className="mx-auto w-full max-w-6xl">
@@ -10,43 +15,38 @@ export default function AboutPage() {
             K
           </div>
           <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-kodex-muted">
-            KODEX — TECHNOLOGY &amp; INNOVATION
+            {messages.brandLine}
           </p>
           <h1 className="text-5xl font-semibold leading-[1.05] tracking-[-0.05em] sm:text-6xl md:text-7xl">
-            About KODEX
+            {copy.title}
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-kodex-muted sm:text-xl sm:leading-9">
-            KODEX is a digital technology company based in Rwanda, combining
-            digital agency services with technology and innovation to build
-            credible solutions for the modern world.
+            {copy.description}
           </p>
         </header>
 
         <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:mt-24 md:grid-cols-2">
           <section className="bg-kodex-bg p-7 sm:p-10 lg:p-12">
             <p className="text-xs font-medium uppercase tracking-[0.24em] text-kodex-muted">
-              01 / Direction
+              {copy.direction}
             </p>
             <h2 className="mt-10 text-2xl font-medium tracking-[-0.035em] sm:text-3xl">
-              Our Vision
+              {copy.vision}
             </h2>
             <p className="mt-5 max-w-lg text-base leading-7 text-kodex-muted sm:text-lg sm:leading-8">
-              To become a leading technology company in Africa, known for
-              building thoughtful, premium digital experiences.
+              {copy.visionText}
             </p>
           </section>
 
           <section className="bg-kodex-bg p-7 sm:p-10 lg:p-12">
             <p className="text-xs font-medium uppercase tracking-[0.24em] text-kodex-muted">
-              02 / Principles
+              {copy.principles}
             </p>
             <h2 className="mt-10 text-2xl font-medium tracking-[-0.035em] sm:text-3xl">
-              Our Approach
+              {copy.approach}
             </h2>
             <p className="mt-5 max-w-lg text-base leading-7 text-kodex-muted sm:text-lg sm:leading-8">
-              We believe in quality over speed, restraint over clutter, and real
-              solutions over empty promises. Every project is built with care,
-              precision, and a focus on the people using it.
+              {copy.approachText}
             </p>
           </section>
         </div>
